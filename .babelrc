@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "@babel/preset-env", //Permite compilar ES6
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+}
