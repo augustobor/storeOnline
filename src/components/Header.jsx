@@ -53,7 +53,7 @@ const Header = () => {
                 <li className="navbar-email" onClick={handleToggle}>platzi@example.com</li>
                 <li className="navbar-shopping-cart" onClick={handleToggleOrders}>
                 <img src={shoppingCart} alt="shopping cart"/>
-                { state.cart.length > 0 ? <div>state.cart.length</div> : null }
+                { state.cart.length > 0 ? <div>{state.cart.length}</div> : null }
                 </li>
             </ul>
             </div>

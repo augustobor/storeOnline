@@ -7,8 +7,8 @@ const MyOrder = () => {
 	const { state } = useContext(AppContext);
 
     const sumTotal = () => {
-        const reducer = (acumulador, currentValue) => { acumulador + currentValue.price }
-        const sum = state.cart.reduce(reducer,0) 
+		let sum = 0
+		state.cart.map((product) =>  {sum += product.price})
         return sum
     }
 
@@ -19,7 +19,7 @@ const MyOrder = () => {
 			</div>
 			<div className="my-order-content">
 				{state.cart.map(product => (
-					<OrderItem product={product} key={`orderItem-${product.id}`} />
+					<OrderItem product={product} key={product.id} /> 
 				))}
 				<div className="order">
 					<p>
